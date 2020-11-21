@@ -1,4 +1,5 @@
 // 1
+
 function getResult(a,b) {
 	if (typeof (a) != "number" || typeof b != "number" ) {
 		return "Ввелите число ";
@@ -142,5 +143,12 @@ function getGrade(rating) {
 }
 
 console.log ( getGrade(135) );
+module.exports = {
+  getResult,
+  getQuadrant,
+  getPositive,
+  getMax,
+  getGrade,
+ }
 
 // 5 done 

@@ -1,0 +1,23 @@
+{
+  "name": "homework-1-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src.js",
+  "scripts": {
+	 "test": "mocha ./src/**/tests/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xorunjiy97/homeWork-1-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xorunjiy97/homeWork-1-/issues"
+  },
+  "homepage": "https://github.com/Xorunjiy97/homeWork-1-#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}

@@ -1,4 +1,13 @@
 // 1. Найти сумму четных чисел и их количество в диапазоне от 1 до 99
+module.exports = {
+
+      showSimpleNum,
+      getRoot,
+      factorial,
+      sumNum,
+      showReverse,
+
+}
 function getEven(){
 
 		let resultSum = 0 ;
@@ -48,9 +57,12 @@ getEven();
 
 function getRoot(num) {
 	if (typeof (num) != "number" ) {
-				return "Введите корректное число";
-			}
-	if(!num && num !== 0)  ; 
+        return "Введите корректное число";
+    }
+
+	if(!num && num !== 0) {
+        return "Введите корректное число";
+    } ;
 	for (let i = 1;;i++) {
 		let q = i * i;
 

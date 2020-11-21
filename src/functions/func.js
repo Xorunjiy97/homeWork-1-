@@ -1,5 +1,15 @@
 // //1. Получить строковое название дня недели по номеру дня.
+module.exports = {
+
+      resultWeek,
+}
 function resultWeek(str) {
+    if (typeof (str) != "number" ) {
+    		return "Введите число ";
+    	}
+    	if (!str ){
+    		return "Введите все данные " ;
+    	}
 	switch (str){
 		case 1 : 
 		day = 'Понедельник';
@@ -23,7 +33,7 @@ function resultWeek(str) {
 			day =  'Воскресенье';
 		break;
 		default: 
-		day = 'Неверно введен день недели ';
+		day = 'Неверно введен день недели';
 		
 		
 		

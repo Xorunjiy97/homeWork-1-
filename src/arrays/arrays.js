@@ -1,39 +1,53 @@
 // // 1.min
+module.exports = {
+
+               showMin,
+               showMax,
+               showMaxIndex,
+               showMinIndex,
+               sumElementsOddIndex,
+               reversArr,
+               getSum,
+               arrReverse,
+               bubbleSort,
+           };
 function showMin(num) {
+
+
+
 	if (!Array.isArray(num)) {
 		return "type array" ;
 	}
 
-const  arr = [];
 let min = num[0];
 
 for (let i = 0; i < num.length; i++){
 	if ( num[i] < min ){
 		min = num[i];
-		 
-	} 
+
+	}
+	return min ;
 }
 
 console.log(min);
 
 }
-
-
 showMin([4, 2, 4, 1, 0 ,5]);
 
-// 2. max 
+//// 2. max
 function showMax (num) {
 	if (!Array.isArray(num)) {
 		return "type array" ;
 	}
-	
+
 	let max = num[0];
 	for (let i = 0; i < num.length; i++) {
 		if (num[i]> max) {
 			max = num[i] ;
 		}
+
 	}
-	console.log (max);
+	return max ;
 }
 
 showMax( [4, 2, 4, 1 , 0 ,5] );
@@ -53,7 +67,7 @@ function showMinIndex(num){
 			min = i ;
 		}
 	}
-	
+
 return min;
 }
 console.log(showMinIndex( [4, 2, 4, 10 , 9 ,5] ) );
@@ -61,9 +75,9 @@ console.log(showMinIndex( [4, 2, 4, 10 , 9 ,5] ) );
 
 
 // 4 Найти индекс max элемента массива
-
-
-
+//
+//
+//
 function showMaxIndex(num){
 	if (!Array.isArray(num)) {
 		return "type array" ;
@@ -71,65 +85,59 @@ function showMaxIndex(num){
 
 	let max = 0 ;
 	for (let i = 0; i < num.length; i++) {
-		if (num[i] > num[max]) {
+		if (num[i] > num[0]) {
 			max = i ;
 		}
 	}
-	
+
 return max;
 }
-console.log(showMaxIndex( [4, 2, 4, 10 , 9 ,5] ) );
+console.log(showMaxIndex( [11, 2, 4, 10 , 9 ,5] ) );
 
 
-//4 done 
+//4 done
 
- //5. Посчитать сумму элементов массива с нечетными индексами
+//5. Посчитать сумму элементов массива с нечетными индексами
 
- function getSum(num) {
-	if (!Array.isArray(num)) {
-		return "type array" ;
-	}
-	 
+function sumElementsOddIndex(myArray){
+    if(!Array.isArray(myArray)){
+        return "Please type an array";
+    }
+    let sumWithOddIndex = 0;
+    let oddElementIndex = 0;
 
-		let sum = 0;
+    for (let i = 0; i < myArray.length; i++) {
+        if(oddElementIndex = i % 2 !== 0) {
+            sumWithOddIndex += i;
+        }
+    }
+    return sumWithOddIndex;
+}
+console.log("sumElementsOddIndex", sumElementsOddIndex([]));
 
-		for (let i = 0; i < num.length; i++){
-
-		if (num[i] %2 !== 0) {
-			sum += num[i];
-
-		}
-		}
-		return sum;
-	}	
-		
-	console.log(getSum( [4, 22, 4, 10 , 8 ,2] ) );
 	//5
-	
-	// 6.Сделать реверс массива (массив в обратном направлении)
+//
+//	// 6.Сделать реверс массива (массив в обратном направлении)
+//
+//
+	function reversArr(arr) {
+      if (!Array.isArray(arr)) {
+        return "type array";
+      }
+      let newArr = [];
 
+      for (i = arr.length - 1; i >= 0; i--) {
+        newArr[arr.length - 1 - i] = arr[i];
+      }
 
-	function arrReverse(num) {
+      return newArr;
+    }
 
-		if (!Array.isArray(num)) {
-			return "type array" ;
-		}
-
-		let numReverse = [];
-		
-
-		for (i =  num.length - 1; i >= 0 ;i-- ) {
-
-			numReverse[num.length - 1 - i] = num[i];
-		}
-
-		return numReverse; 
-	}
-	console.log(arrReverse([4, 22, 4, 10 , 5 ,2]));
+    console.log(reversArr([1, 2, 3, 4, 5, 6, 7]));
 
 
 	//  6 done
-
+//
 	// 7 Посчитать количество нечетных элементов массива
 	function getSum(arr) {
 		if (!Array.isArray(arr)) {
@@ -149,7 +157,7 @@ console.log(showMaxIndex( [4, 2, 4, 10 , 9 ,5] ) );
 
 	}
 	console.log(getSum([4, 22, 4, 1 , 9, 2]));
-	//7 done 
+	//7 done
 	//8. Поменять местами первую и вторую половину массива, например, для массива 1 2 3
 	//4, результат 3 4 1 2
 
@@ -161,12 +169,12 @@ console.log(showMaxIndex( [4, 2, 4, 10 , 9 ,5] ) );
 
 		let  halflen = arr.length /2;
 		let  centerpos = halflen + arr.length % 2;
-		
+
 		for (let i = 0; i < halflen; i++) {
 		 let temp = arr[i];
 		  arr[i] = arr[centerpos + i];
 		  arr[centerpos + i] = temp;
-		
+
 
 	}
 	return  arr;
@@ -191,4 +199,4 @@ function bubbleSort(arr) {
 	return arr;
 }
 console.log(bubbleSort([4, 22, 4, 1 , 9, 2]));
-// 9 done 
+// 9 done
